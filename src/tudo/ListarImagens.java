@@ -1,4 +1,4 @@
-package view;
+package tudo;
 
 import java.awt.Label;
 
@@ -15,6 +15,7 @@ public class ListarImagens {
 	private static DefaultTableModel modelo;
 	private JTable table;
     private JScrollPane scrol;
+    private JButton btnListar;
     private JButton btnStart;
     private JButton btnStop;
     private JButton btnTerminate;
@@ -29,6 +30,7 @@ public class ListarImagens {
         this.telaListarImagens.setLocationRelativeTo(null);
         this.telaListarImagens.setVisible(true);
         this.lblTitulo = new JLabel("Listar Imagens");
+        this.btnListar = new JButton("Listar");
         this.btnStart = new JButton("Start");
         this.btnStop = new JButton("Stop");
         this.btnTerminate = new JButton("Terminate");
@@ -36,6 +38,8 @@ public class ListarImagens {
         this.table = new JTable();
         this.scrol = new JScrollPane(table);
     }
+
+    
 
 }
 

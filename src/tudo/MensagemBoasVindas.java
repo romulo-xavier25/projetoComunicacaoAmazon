@@ -1,4 +1,4 @@
-package view;
+package tudo;
 
 import javax.swing.JOptionPane;
 
@@ -11,7 +11,6 @@ public MensagemBoasVindas(){
     
     private void mostrarMensagemBoasVindas(){
         JOptionPane.showMessageDialog(null, "Seja bem-vindo ao ...");
-        ListarImagens listarImagens = new ListarImagens();
     }
 
 }

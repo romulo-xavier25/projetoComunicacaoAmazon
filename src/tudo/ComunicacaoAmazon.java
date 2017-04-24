@@ -1,4 +1,4 @@
-package view;
+package tudo;
 
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
@@ -24,6 +24,7 @@ public class ComunicacaoAmazon {
         }
         
         MensagemBoasVindas msg = new MensagemBoasVindas();
+        ListarImagens listarImagens = new ListarImagens();
 	}
 
 }
