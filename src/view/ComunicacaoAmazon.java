@@ -25,7 +25,6 @@ public class ComunicacaoAmazon {
         
         MensagemBoasVindas msg = new MensagemBoasVindas();
         ListarImagens listarImagens = new ListarImagens();
-        RealizarAcaoImagem realizarAcaoImagem = new RealizarAcaoImagem();
 	}
 
 }
