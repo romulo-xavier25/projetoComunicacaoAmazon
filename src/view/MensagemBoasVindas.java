@@ -1,4 +1,4 @@
-package tudo;
+package view;
 
 import javax.swing.JOptionPane;
 

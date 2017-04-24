@@ -1,4 +1,4 @@
-package tudo;
+package view;
 
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
