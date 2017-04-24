@@ -43,11 +43,33 @@ public class ListarImagens implements ActionListener, MouseListener{
         this.btnPause = new JButton("Pause");
         this.table = new JTable();
         this.scrol = new JScrollPane(table);
+        
+        addJTable();
+        addComponentes();
+        configurarComponentes();
+        
     }
     
-    private void addComponentes(){}
+    private void addComponentes(){
+    	this.telaListarImagens.add(this.lblTitulo);
+    	this.telaListarImagens.add(this.scrol);
+    	this.telaListarImagens.add(this.btnListar);
+    	this.telaListarImagens.add(this.btnStart);
+    	this.telaListarImagens.add(this.btnStop);
+    	this.telaListarImagens.add(this.btnTerminate);
+    	this.telaListarImagens.add(this.btnPause);
+    }
 
-    private void configurarComponentes(){}
+    private void configurarComponentes(){
+    	this.lblTitulo.setBounds(20, 10, 200, 30); // x, y, largura, altura
+    	this.scrol.setBounds(20, 50, 960, 300);
+    	this.btnListar.setBounds(80, 400, 150, 30);
+    	this.btnStart.setBounds(250, 400, 150, 30);
+    	this.btnStop.setBounds(420, 400, 150, 30);
+    	this.btnTerminate.setBounds(590, 400, 150, 30);
+    	this.btnPause.setBounds(760, 400, 150, 30);
+    	
+    }
     
     private void addJTable(){
         table.setAutoscrolls(true);
