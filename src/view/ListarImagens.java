@@ -14,6 +14,7 @@ import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
 import model.Imagem;
+import model.ImagemDAO;
 
 public class ListarImagens implements ActionListener, MouseListener{
 	
@@ -94,14 +95,30 @@ public class ListarImagens implements ActionListener, MouseListener{
     }
     
     @Override
-	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
+	public void actionPerformed(ActionEvent evento) {
+    	Object o = evento.getSource();
+    	if(o == this.btnListar){
+    		ImagemDAO imagemDAO = new ImagemDAO();
+    		atualizarTabela(imagemDAO.getInstancia());
+    	}
 		
 	}
     
     @Override
 	public void mousePressed(MouseEvent e) {
-		// TODO Auto-generated method stub
+		if(e.getClickCount() == 2){
+			Integer linha = this.table.getSelectedRow();
+			String codigoImagem = (String) this.table.getValueAt(linha, 0);
+			String nomeAMI = (String) this.table.getValueAt(linha, 1);
+			String id = (String) this.table.getValueAt(linha, 2);
+			String source = (String) this.table.getValueAt(linha, 3);
+			String owner = (String) this.table.getValueAt(linha, 4);
+			String visibility = (String) this.table.getValueAt(linha, 5);
+			String status = (String) this.table.getValueAt(linha, 6);
+			String dataCriacao = (String) this.table.getValueAt(linha, 7);
+			RealizarAcaoImagem realizarAcaoImagem = new RealizarAcaoImagem();
+			realizarAcaoImagem.setarJLabel(codigoImagem, nomeAMI, id, source, owner, visibility, status, dataCriacao);
+		}
 		
 	}
 

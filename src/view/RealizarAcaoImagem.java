@@ -75,5 +75,10 @@ public class RealizarAcaoImagem {
     }
     
     private void addEventos(){}
+    
+    public void setarJLabel(String codigoIMG, String nomeAMI, String id, String source, String owner, String visibility, String status, String dataCriacao){
+    	
+    }
+
 
 }
